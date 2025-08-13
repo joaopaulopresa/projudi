@@ -21,3 +21,85 @@
   align-items: center;
   justify-content: center;
 }
+
+/* New styles for Sistema de Processo Judicial sections */
+.systemSection {
+  padding: 2rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.contextsSection {
+  padding: 2rem 0;
+}
+
+.contextCard {
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background-color: var(--ifm-background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.contextCard h3 {
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contextCard ul {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.contextCard ul li {
+  margin-bottom: 0.3rem;
+}
+
+.sharedKernelSection {
+  padding: 2rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.sharedKernelSection h4 {
+  color: var(--ifm-color-primary);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.structureSection {
+  padding: 2rem 0;
+}
+
+.packageStructure {
+  background-color: var(--ifm-code-background);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  padding: 1rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.benefitsSection {
+  padding: 2rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.benefitsSection p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .contextCard {
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .packageStructure {
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
