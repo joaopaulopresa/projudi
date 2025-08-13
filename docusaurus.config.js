@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Projudi',
-  tagline: 'Sistema de Documentação Jurídica',
+  tagline: 'Sistema de Processo Judicial - Arquitetura baseada em Domain-Driven Design',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -84,7 +84,33 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Documentação',
+            label: 'Arquitetura',
+          },
+          {
+            label: 'Bounded Contexts',
+            position: 'left',
+            items: [
+              {
+                label: 'Conclusões e Decisões',
+                to: '/docs/contexts/conclusao',
+              },
+              {
+                label: 'Pendências e Cumprimentos',
+                to: '/docs/contexts/pendencia',
+              },
+              {
+                label: 'Audiências e Agenda',
+                to: '/docs/contexts/audiencia',
+              },
+              {
+                label: 'Ciclo de Vida do Processo',
+                to: '/docs/contexts/processo-ciclovida',
+              },
+              {
+                label: 'Identidade e Acesso',
+                to: '/docs/contexts/identidade-acesso',
+              },
+            ],
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -98,17 +124,29 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Documentação',
+            title: 'Arquitetura',
             items: [
               {
                 label: 'Introdução',
                 to: '/docs/intro',
               },
+              {
+                label: 'Bounded Contexts',
+                to: '/#bounded-contexts',
+              },
+              {
+                label: 'Shared Kernel',
+                to: '/#shared-kernel',
+              },
             ],
           },
           {
-            title: 'Comunidade',
+            title: 'Desenvolvimento',
             items: [
+              {
+                label: 'Estrutura de Pacotes',
+                to: '/#estrutura-de-pacotes',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/joaopaulopresa/projudi',
@@ -122,14 +160,19 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
+              {
+                label: 'Domain-Driven Design',
+                href: 'https://domainlanguage.com/ddd/',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Projudi. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Projudi - Sistema de Processo Judicial. Documentação construída com Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['java', 'json', 'yaml'],
       },
     }),
 };
